@@ -28,3 +28,45 @@ JSX can reference JavaScript variables
 
 </div>
 ```
+
+
+class vs. className
+  class is a JavaScript keyword
+  We use className to prevent collision 
+
+
+
+```js
+// Import the React and ReactDOM Libraries
+import React from "react";
+import ReactDOM from "react-dom";
+
+
+function getButtonText() {
+  return "Click Me"
+}
+// Create a React component
+const App = () => {
+  return (
+    <div>
+      <label className="label" for="name">
+        Enter name:
+      </label>
+      <input id="name" type="text" />
+      <button style={{ backgroundColor: "blue", color: "white" }}>
+        {getButtonText()}
+        {/* This is not a JS Object, it's a syntax to a JS variable  */}
+      </button>
+    </div>
+  );
+};
+
+// Take the react component and show it on the screen
+ReactDOM.render(<App />, document.querySelector("#root"));
+
+```
+
+
+`Error:  Objects are not valid as a React child.` 
+We are not allowed to take a JS object and reference it inside of JSX specifically where we would put text. 
+const buttonText = {text: "Click Me"}
