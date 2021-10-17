@@ -70,3 +70,36 @@ ReactDOM.render(<App />, document.querySelector("#root"));
 `Error:  Objects are not valid as a React child.` 
 We are not allowed to take a JS object and reference it inside of JSX specifically where we would put text. 
 const buttonText = {text: "Click Me"}
+
+
+# Communicating With Props
+
+Component Nesting
+  A component can be shown inside of another component
+Component Reusability
+  Making components that can be reusable throughout our application
+Component Configuration
+  Ability to configure a component upon creation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
